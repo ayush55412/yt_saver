@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Downloader with Preview</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>YouTube Video Downloader</h1>
+            <a href="/">Home</a>
+        </div>
+        <form id="previewForm">
+            <input type="url" name="url" id="url" placeholder="Enter YouTube URL" required>
+            <button type="submit">Preview</button>
+        </form>
+        <div id="previewSection" style="display: none;">
+            <h3>Video Preview</h3>
+            <img id="thumbnail" src="" alt="Thumbnail">
+            <p id="title"></p>
+            <p id="duration"></p>
+            <p id="fileSize"></p>
+            <form id="downloadForm">
+                <select name="format" id="format">
+                    <option value="mp4">Video (MP4)</option>
+                    <option value="mp3">Audio (MP3)</option>
+                </select>
+                <button type="submit">Download</button>
+            </form>
+        </div>
+        <div id="message"></div>
+        <div id="loadingIndicator" style="display: none;">Loading...</div>
+
+        <div id="fileManagementSection" style="display: none;">
+            <h3>Your Downloads</h3>
+            <ul id="fileList"></ul>
+            <form id="deleteForm">
+                <input type="text" name="file_path" id="filePath" placeholder="Enter file path to delete" required>
+                <button type="submit">Delete File</button>
+            </form>
+        </div>
+    </div>
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
